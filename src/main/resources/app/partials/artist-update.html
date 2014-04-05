@@ -1,0 +1,48 @@
+<h2>Artist</h2>
+
+<table class="table table-striped table-condensed table-hover">
+
+    <thead>
+    <tr>
+        <th>Original</th>
+        <th ng-repeat="update in updates">
+            {{update.source}}
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            <input ng-model="artist.name" type="text" class="form-control" id="name" placeholder="Name"/>
+        </td>
+        <td ng-repeat="update in updates">
+            <p ng-click="updateField(update.name, 'name')" ng-class="{true : 'text-muted'}[artist.name === update.name]"
+               class="form-control-static">{{ update.name }}</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input ng-model="artist.birth" type="text" class="form-control" id="birth" placeholder="Birth"/>
+        </td>
+        <td ng-repeat="update in updates">
+            <p ng-click="updateField(update.birth, 'birth')" ng-class="{true : 'text-muted'}[artist.birth === update.birth]"
+               class="form-control-static">{{ update.birth | date:dateFormat }}</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input ng-model="artist.death" type="text" class="form-control" id="death" placeholder="Death"/>
+        </td>
+        <td ng-repeat="update in updates">
+            <p ng-click="updateField(update.death, 'death')" ng-class="{true : 'text-muted'}[artist.death === update.death]"
+               class="form-control-static">{{ update.death | date:dateFormat }}</p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div class="control-group">
+    <div class="controls">
+        <button ng-click="cancel()" class="btn btn-link">Cancel</button>
+        <button ng-click="save()" class="btn btn-primary">Save</button>
+    </div>
+</div>

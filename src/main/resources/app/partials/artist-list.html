@@ -1,0 +1,23 @@
+<h2>Artists</h2>
+
+<form class="form-inline">
+    <div class="form-group">
+        <label class="sr-only" for="artist-search">Filter</label>
+        <input class="form-control" id="artist-search" placeholder="Filter" type="text" ng-model="query"/>
+    </div>
+</form>
+
+<table class="table table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="artist in artists | filter:query">
+        <td><a ng-click="editArtist(artist.id)">{{artist.name}}</a></td>
+    </tr>
+    </tbody>
+</table>
+
+<button type="button" class="btn btn-default">New artist</button>

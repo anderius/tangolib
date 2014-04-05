@@ -1,0 +1,46 @@
+<h2>Artist</h2>
+
+<form class="form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">ID</label>
+
+        <div class="col-sm-10">
+            <p class="form-control-static">{{artist.id}}</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">Name</label>
+
+        <div class="col-sm-10">
+            <input ng-model="artist.name" type="text" class="form-control" id="name" placeholder="Name"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="birth" class="col-sm-2 control-label">Birth</label>
+
+        <div class="col-sm-10">
+            <input ng-model="artist.birth" type="text" class="form-control" id="birth" placeholder="Birth"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="death" class="col-sm-2 control-label">Death</label>
+
+        <div class="col-sm-10">
+            <input ng-model="artist.death" type="text" class="form-control" id="death" placeholder="Death"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="comment" class="col-sm-2 control-label">Comment</label>
+
+        <div class="col-sm-10">
+            <input ng-model="artist.comment" type="text" class="form-control" id="comment" placeholder="Comment"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <button ng-click="cancel()" type="submit" class="btn btn-link">Cancel</button>
+            <button ng-click="save()" class="btn btn-primary">Save</button>
+            <button ng-click="update()" class="btn btn-warning">Update</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="tangolib">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="row">
+        <h1>Tangolib</h1>
+    </div>
+
+    <ul class="nav nav-tabs" ng-controller="navCtrl">
+        <li ng-class="navClass('/files')"><a href='#/files'>Files</a></li>
+        <li ng-class="navClass('/artists')"><a href='#/artists'>Artists</a></li>
+        <li ng-class="navClass('/works')"><a href='#/works'>Works</a></li>
+    </ul>
+
+    <div ng-view></div>
+
+</div>
+</body>
+</html>

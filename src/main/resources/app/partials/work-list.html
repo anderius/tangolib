@@ -1,0 +1,25 @@
+<h2>Works</h2>
+
+<form class="form-inline">
+    <div class="form-group">
+        <label class="sr-only" for="work-search">Filter</label>
+        <input class="form-control" id="work-search" placeholder="Filter" type="text" ng-model="query"/>
+    </div>
+</form>
+
+<table class="table table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Title</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="work in works | filter:query">
+        <td><a ng-click="editWork(work.id)">{{work.title}}</a>
+            (<a ng-click="deleteWork(work.id)">x</a>)
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<button type="button" class="btn btn-default">New work</button>
