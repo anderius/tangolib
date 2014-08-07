@@ -13,6 +13,7 @@
     <groupId>no.tango</groupId>
     <artifactId>tangolib</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <description>Application for managing and playing from a tango library</description>
     <properties>
         <start-class>no.tango.tangolib.Application</start-class>
     </properties>
